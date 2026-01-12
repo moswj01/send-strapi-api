@@ -1,0 +1,28 @@
+{
+    "kind": "collectionType",
+    "collectionName": "machines",
+    "info": {
+        "singularName": "machine",
+        "pluralName": "machines",
+        "displayName": "Machine"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "size": {
+            "type": "integer"
+        },
+        "price": {
+            "type": "integer"
+        },
+        "type": {
+            "type": "enumeration",
+            "enum": [
+                "wash",
+                "dry"
+            ]
+        }
+    }
+}

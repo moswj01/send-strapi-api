@@ -1,0 +1,54 @@
+{
+    "kind": "collectionType",
+    "collectionName": "orders",
+    "info": {
+        "singularName": "order",
+        "pluralName": "orders",
+        "displayName": "Order"
+    },
+    "options": {
+        "draftAndPublish": true
+    },
+    "pluginOptions": {},
+    "attributes": {
+        "customer_name": {
+            "type": "string"
+        },
+        "customer_phone": {
+            "type": "string"
+        },
+        "customer_lat": {
+            "type": "float"
+        },
+        "customer_lng": {
+            "type": "float"
+        },
+        "store_lat": {
+            "type": "float"
+        },
+        "store_lng": {
+            "type": "float"
+        },
+        "order_detail": {
+            "type": "string"
+        },
+        "rider_name": {
+            "type": "string"
+        },
+        "order_status": {
+            "type": "enumeration",
+            "enum": [
+                "pending",
+                "processing",
+                "cancelled",
+                "completed"
+            ]
+        },
+        "note": {
+            "type": "string"
+        },
+        "total_amount": {
+            "type": "decimal"
+        }
+    }
+}
