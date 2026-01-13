@@ -41,6 +41,12 @@
       "relation": "manyToMany",
       "target": "api::machine.machine",
       "mappedBy": "stores"
+    },
+    "brand": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::brand.brand",
+      "inversedBy": "stores"
     }
   }
 }

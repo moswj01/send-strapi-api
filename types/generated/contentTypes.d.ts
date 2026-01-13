@@ -482,6 +482,7 @@ export interface ApiBrandBrand extends Struct.CollectionTypeSchema {
       true
     >;
     publishedAt: Schema.Attribute.DateTime;
+    stores: Schema.Attribute.Relation<'oneToMany', 'api::store.store'>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -659,6 +660,7 @@ export interface ApiStoreStore extends Struct.CollectionTypeSchema {
     draftAndPublish: true;
   };
   attributes: {
+    brand: Schema.Attribute.Relation<'manyToOne', 'api::brand.brand'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
