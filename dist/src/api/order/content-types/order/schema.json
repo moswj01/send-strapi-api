@@ -49,6 +49,16 @@
         },
         "total_amount": {
             "type": "decimal"
+        },
+        "store": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "api::store.store"
+        },
+        "users_permissions_user": {
+            "type": "relation",
+            "relation": "oneToOne",
+            "target": "plugin::users-permissions.user"
         }
     }
 }

@@ -611,12 +611,17 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
     >;
     publishedAt: Schema.Attribute.DateTime;
     rider_name: Schema.Attribute.String;
+    store: Schema.Attribute.Relation<'oneToOne', 'api::store.store'>;
     store_lat: Schema.Attribute.Float;
     store_lng: Schema.Attribute.Float;
     total_amount: Schema.Attribute.Decimal;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    users_permissions_user: Schema.Attribute.Relation<
+      'oneToOne',
+      'plugin::users-permissions.user'
+    >;
   };
 }
 
