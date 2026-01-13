@@ -574,6 +574,7 @@ export interface ApiMachineMachine extends Struct.CollectionTypeSchema {
     price: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
     size: Schema.Attribute.Integer;
+    stores: Schema.Attribute.Relation<'manyToMany', 'api::store.store'>;
     type: Schema.Attribute.Enumeration<['wash', 'dry']>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
@@ -668,6 +669,7 @@ export interface ApiStoreStore extends Struct.CollectionTypeSchema {
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::store.store'> &
       Schema.Attribute.Private;
+    machines: Schema.Attribute.Relation<'manyToMany', 'api::machine.machine'>;
     publishedAt: Schema.Attribute.DateTime;
     store_name: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;

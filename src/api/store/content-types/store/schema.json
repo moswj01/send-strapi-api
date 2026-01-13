@@ -35,6 +35,12 @@
       "relation": "manyToMany",
       "target": "api::cupon.cupon",
       "mappedBy": "stores"
+    },
+    "machines": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::machine.machine",
+      "mappedBy": "stores"
     }
   }
 }
