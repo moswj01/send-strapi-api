@@ -610,6 +610,7 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
       ['pending', 'processing', 'cancelled', 'completed']
     >;
     publishedAt: Schema.Attribute.DateTime;
+    rider_commission: Schema.Attribute.Decimal;
     rider_name: Schema.Attribute.String;
     store: Schema.Attribute.Relation<'oneToOne', 'api::store.store'>;
     store_lat: Schema.Attribute.Float;
