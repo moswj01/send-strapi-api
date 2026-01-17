@@ -597,6 +597,7 @@ export interface ApiOrderOrder extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
+    customer_charged: Schema.Attribute.Decimal;
     customer_lat: Schema.Attribute.Float;
     customer_lng: Schema.Attribute.Float;
     customer_name: Schema.Attribute.String;
