@@ -1,0 +1,1 @@
+{"version":3,"file":"index.js","sources":["../../../server/src/config/index.ts"],"sourcesContent":["import { defaultConfig } from './default-plugin-config';\n\nexport const config = {\n  default: defaultConfig,\n};\n"],"names":["config","default","defaultConfig"],"mappings":";;;;MAEaA,MAAS,GAAA;IACpBC,OAASC,EAAAA;AACX;;;;"}

@@ -1,0 +1,1 @@
+{"version":3,"file":"index.mjs","sources":["../../../server/src/controllers/index.ts"],"sourcesContent":["import documentation from './documentation';\n\nexport default {\n  documentation,\n};\n"],"names":["documentation"],"mappings":";;AAEA,kBAAe;AACbA,IAAAA;AACF,CAAE;;;;"}
