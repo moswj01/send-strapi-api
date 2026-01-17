@@ -1,0 +1,89 @@
+/* Import Kanit Font */
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700&display=swap');
+
+/* Apply Kanit Font Globally */
+* {
+  font-family: 'Kanit', sans-serif !important;
+}
+
+/* Custom Login Page Styles */
+[data-strapi='auth-page'] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+/* Login Box Styling */
+[data-strapi='auth-page'] > div {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.95) !important;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+}
+
+/* Welcome Title */
+[data-strapi='auth-page'] h1 {
+  font-size: 32px !important;
+  font-weight: 700 !important;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Input Fields */
+[data-strapi='auth-page'] input {
+  border-radius: 8px !important;
+  border: 2px solid #e0e0e0 !important;
+  padding: 12px 16px !important;
+  transition: all 0.3s ease !important;
+}
+
+[data-strapi='auth-page'] input:focus {
+  border-color: #1890ff !important;
+  box-shadow: 0 0 0 3px rgba(24, 144, 255, 0.1) !important;
+}
+
+/* Login Button */
+[data-strapi='auth-page'] button[type='submit'] {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%) !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 12px !important;
+  font-weight: 600 !important;
+  transition: all 0.3s ease !important;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+[data-strapi='auth-page'] button[type='submit']:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(102, 126, 234, 0.4) !important;
+}
+
+/* Remember Me Checkbox */
+[data-strapi='auth-page'] [type='checkbox'] {
+  border-radius: 4px !important;
+  border: 2px solid #1890ff !important;
+}
+
+/* Forgot Password Link */
+[data-strapi='auth-page'] a {
+  color: #667eea !important;
+  font-weight: 500 !important;
+  transition: all 0.3s ease !important;
+}
+
+[data-strapi='auth-page'] a:hover {
+  color: #764ba2 !important;
+  text-decoration: none !important;
+}
+
+/* Dark Mode Adjustments */
+[data-theme='dark'] [data-strapi='auth-page'] > div {
+  background: rgba(30, 30, 30, 0.95) !important;
+}
+
+[data-theme='dark'] [data-strapi='auth-page'] input {
+  background: rgba(255, 255, 255, 0.05) !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+  color: #fff !important;
+}
