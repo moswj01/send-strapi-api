@@ -81,6 +81,9 @@
         },
         "credit": {
             "type": "decimal"
+        },
+        "google_id": {
+            "type": "string"
         }
     }
 }

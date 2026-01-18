@@ -2,7 +2,7 @@ export default ({ env }) => ({
   'users-permissions': {
     config: {
       register: {
-        allowedFields: ['username', 'email', 'password', 'p_no', 'img_cover', 'credit'],
+        allowedFields: ['username', 'email', 'password', 'p_no', 'img_cover', 'credit','google_id'],
       },
       providers: {
         google: {
