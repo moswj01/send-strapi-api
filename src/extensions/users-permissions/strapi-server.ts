@@ -1,25 +1,9 @@
-import customAuth from './controllers/custom-auth';
-
 export default (plugin) => {
-  const originalAuthController = plugin.controllers.auth;
-
-  plugin.controllers.auth = (ctx) => {
-    const base = typeof originalAuthController === 'function' 
-      ? originalAuthController(ctx) 
-      : originalAuthController;
-    
-    return {
-      ...base,
-      socialLogin: customAuth.socialLogin,
-    };
+  // Add the social login controller method
+  plugin.controllers.auth.socialLogin = async (ctx) => {
+    const customAuthController = require('./controllers/custom-auth').default;
+    return customAuthController.socialLogin(ctx);
   };
-
-  plugin.routes['content-api'].routes.push({
-    method: 'POST',
-    path: '/auth/social-login',
-    handler: 'auth.socialLogin',
-    config: { auth: false }
-  });
 
   return plugin;
 };
